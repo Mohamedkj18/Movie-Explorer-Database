@@ -1,0 +1,9 @@
+mysql.connector
+pandas
+tabulate
+
+
+for running the web app:
+Live server extension in VS code
+Flask
+importlib.util
