@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Movie Explorer</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="browse-movies.html">Browse Movies</a>
+        <a href="search.html">Search</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="custom-queries.html">Custom Queries</a>
+    </nav>
+</header>
+<div class="container" id="homeContainer">
+    <h2>Trending Movies</h2>
+</div>
+<footer>
+    <p>&copy; 2025 Movie Explorer. All rights reserved.</p>
+</footer>
+<script>
+    const homeContainer = document.getElementById('homeContainer'); // A container for the movies
+
+    const trendingMovies = [
+        { movieId: 1, title: "Inception", release_date: "2010-07-16", average_rating: 8.8 },
+        { movieId: 2, title: "The Dark Knight", release_date: "2008-07-18", average_rating: 9.0 },
+        { movieId: 3, title: "Interstellar", release_date: "2014-11-07", average_rating: 8.6 }
+    ];
+
+    trendingMovies.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+        movieCard.innerHTML = `
+            <h3>${movie.title}</h3>
+            <p>Release Date: ${movie.release_date}</p>
+            <p>Average Rating: ${movie.average_rating}</p>
+            <button class="add-to-watchlist" data-movie-id="${movie.movieId}" data-title="${movie.title}">Add to Watchlist</button>
+        `;
+        homeContainer.appendChild(movieCard);
+    });
+</script>
+<script src="search.js"></script>
+</body>
+</html>

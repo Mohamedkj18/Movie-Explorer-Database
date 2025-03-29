@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Search Movies</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="browse-movies.html">Browse Movies</a>
+        <a href="search.html">Search</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="custom-queries.html">Custom Queries</a>
+    </nav>
+</header>
+<div class="container">
+    <form id="searchForm">
+        <label for="searchQuery">Search for a movie:</label><br>
+        <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter movie title" required><br><br>
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Movie Explorer. All rights reserved.</p>
+</footer>
+
+<!-- Link to the JavaScript file -->
+<script src="search.js"></script>
+</body>
+</html>

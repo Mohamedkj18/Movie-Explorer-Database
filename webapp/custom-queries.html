@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Queries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Custom Queries</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="browse-movies.html">Browse Movies</a>
+        <a href="search.html">Search</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="custom-queries.html">Custom Queries</a>
+    </nav>
+</header>
+<div class="container">
+    <h2>Explore Custom Queries</h2>
+    <label for="queryType">Select Query:</label>
+    <select id="queryType">
+        <option value="" disabled selected>Select a query</option>
+        <option value="1">Search Movies by Keyword</option>
+        <option value="2">Filter Movies by Staff Member</option>
+        <option value="3">Total Revenue by Year</option>
+        <option value="4">Actors with Above Average Ratings</option>
+        <option value="5">Movies with Budget > $100M</option>
+    </select>
+    <br><br>
+    <div id="keywordInput" style="display: none;">
+        <label for="queryKeyword">Enter Keyword:</label>
+        <input type="text" id="queryKeyword" placeholder="Enter a keyword (if applicable)">
+    </div>
+    <br>
+    <button id="executeQuery">Execute Query</button>
+    <div id="queryResults"></div>
+</div>
+<footer>
+    <p>&copy; 2025 Movie Explorer. All rights reserved.</p>
+</footer>
+<script src="custome-queries.js"></script>
+</body>
+</html>
